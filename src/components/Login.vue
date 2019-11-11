@@ -2,13 +2,13 @@
     <div>
         <form>
             <div class="form-group">
-                <label for="emailField"><h5><b>Email</b></h5></label>
-                <input type="email" class="form-control" id="emailField" placeholder="Email">
+                <label for="loginEmailField"><h5><b>Email</b></h5></label>
+                <input type="email" class="form-control" id="loginEmailField" placeholder="Email">
             </div>
             <div class="form-group">
-                <label for="passwordField"><h5><b>Password</b></h5></label>
-                <input type="password" class="form-control" id="emailField" placeholder="Password">
-            </div>
+                <label for="loginPasswordField"><h5><b>Password</b></h5></label>
+                <input type="password" class="form-control" id="loginPasswordField" placeholder="Password">
+                </div>
             <button type="submit" class="btn btn-success btn-block">Login</button>
         </form>
     </div>
