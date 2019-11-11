@@ -1,12 +1,10 @@
 <template>
     <div>
         <form 
-            v-on:submit="onSubmit"
-            action="localhost:3000/auth/register"
-            method="post">
+            v-on:submit.prevent="onSubmit">
             <div class="form-group">
                 <label for="registerEmailField"><h5><b>Email</b></h5></label>
-                <input v-model="email" type="emaill" class="form-control" id="registerEmailField" placeholder="Email {{ $store.state.c }}">
+                <input v-model="email" type="emaill" class="form-control" id="registerEmailField" placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="registerPasswordField"><h5><b>Password</b></h5></label>
@@ -36,26 +34,26 @@
             confirmPassword: "",
         }),
         watch: {
-            password: function() {
+            password () {
                 this.passwordInvalid = this.password.length < this.minimumPasswordLength  
             },
-            confirmPassword: function() {
+            confirmPassword () {
                 this.confirmPasswordInvalid = this.password !== this.confirmPassword
             }
 
         },
         computed: {
-            buttonDisabled: function() {
+            buttonDisabled () {
                 return this.passwordInvalid || this.confirmPasswordInvalid || this.password.length < this.minimumPasswordLength
             } 
         },
 
         methods: {
             onSubmit() {
-                // this.$store.dispatch('register', {
-                //     email: this.email,
-                //     password: this.password,
-                // })
+                this.$store.dispatch('register', {
+                    email: this.email,
+                    password: this.password,
+                })
             }
         },
 

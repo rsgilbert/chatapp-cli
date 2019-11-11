@@ -1,6 +1,7 @@
 <template>
     <div>
-        <form>
+        <form
+            v-on:submit.prevent="onSubmit">
             <div class="form-group">
                 <label for="loginEmailField"><h5><b>Email</b></h5></label>
                 <input type="email" class="form-control" id="loginEmailField" placeholder="Email">
@@ -13,4 +14,17 @@
         </form>
     </div>
 </template>
+
+<script>
+    export default {
+        methods: {
+            onSubmit() {
+                this.$store.dispatch('login', {
+                    email: this.email,
+                    password: this.password,
+                })
+            }
+        }
+    }
+</script>
 
