@@ -1,11 +1,12 @@
 <template>
     <div>
         <div class="row justify-content-center mt-5">
-            
             <h3 class="mb-3">CampusGram</h3>
+        </div>
+        <div class="row justify-content-center mt-2">
 
             <div class="col-md-6 col-sm-10">
-                <div class="card bg-light mb-3 d-flex">
+                <div class="card bg-light mb-2 pb-3 d-flex">
                     <div class="card-header d-flex justify-content-between">
                         <div><b>{{ leftHeading }}</b></div>
                         <div class="text-primary" style="cursor:pointer" @click="toggleShowLogin">{{ rightHeading }}</div>

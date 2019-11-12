@@ -4,7 +4,7 @@
             v-on:submit.prevent="onSubmit">
             <div class="form-group">
                 <label for="registerEmailField"><h5><b>Email</b></h5></label>
-                <input v-model="email" type="emaill" class="form-control" id="registerEmailField" placeholder="Email">
+                <input v-model="email" type="emaill" class="form-control" id="registerEmailField" placeholder="Email" autofocus>
             </div>
             <div class="form-group">
                 <label for="registerPasswordField"><h5><b>Password</b></h5></label>
