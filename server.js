@@ -21,7 +21,7 @@ app.use(history({
 app.use(morgan('short'))
 
 const port = process.env.PORT || 3000
-app.listen(3000, () => console.log("Serving at port " + port))
+app.listen(port, () => console.log("Serving at port " + port))
 
 app.post('/auth/register', (req, res) => {
     res.send("successfully sent register call" + req.body)
